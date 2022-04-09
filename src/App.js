@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div className='container'>
-        <Header text='Feedback UI' />
+        <Header />
         <h1>My App</h1>
       </div>
     </>
