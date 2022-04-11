@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import FeedbackItem from './FeedbackItem.jsx'
-import { motion, AnimatePresence, animate } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 function FeedbackList({ feedback, handleDelete }) {
   if (!feedback || feedback.length === 0) {
