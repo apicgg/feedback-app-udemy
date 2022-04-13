@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from 'uuid'
 import { createContext, useState, useEffect } from 'react'
 // import FeedbackData from '../data/FeedbackData'
 
@@ -57,16 +56,11 @@ export const FeedbackProvider = ({ children }) => {
       body: JSON.stringify(updItem),
     })
 
-    const data = response.json()
+    const data = await response.json()
 
     setFeedback(
       feedback.map((item) => (item.id === id ? { ...item, ...data } : item))
     )
-
-    setFeedbackEdit({
-      item: {},
-      edit: true,
-    })
   }
 
   // Set item to be updated
